@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 public class ATM {
     private static Scanner in;
-    private static float balance = 0; // initial balance to 0 for everyone
+    private static float balance = 0; 
     private static int anotherTransaction;
 
     public static void main(String args[]) {
         in = new Scanner(System.in);
 
-        // call our transaction method here
         transaction();
     }
 
     private static void transaction() {
-        // here is where most of the work is
 
         int choice;
 
@@ -31,7 +29,7 @@ public class ATM {
                 amount = in.nextFloat();
                 if (amount > balance || amount == 0) {
                     System.out.println("You have insufficient funds\n\n");
-                    anotherTransaction(); // ask if they want another transaction
+                    anotherTransaction(); 
                 } else {
                     // they have some cash
                     // update balance
